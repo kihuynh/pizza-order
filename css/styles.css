@@ -1,8 +1,16 @@
 body {
   background-color: #ffc87b;
 }
-h1 {
+h1, h3 {
   text-align: center;
+  margin-bottom: 50px;
+}
+#cathead {
+margin: auto;
+display: block;
+border-radius: 40%;
+width: 70%;
+
 }
 .receipt {
   display: none;

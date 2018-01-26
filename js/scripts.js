@@ -1,6 +1,6 @@
 function Pizza(portion,firstTopping, secondTopping) {
   this.portion = portion;
-  this.firstTopping = firstTopping; 
+  this.firstTopping = firstTopping; // maybe an array of toppings or string
   this.secondTopping = secondTopping;
 }
 
@@ -8,11 +8,13 @@ Pizza.prototype.cost = function () {
   var price = 10;
 
   if (this.portion === "Small") {
-    price = price -2;
+    price -=3;
+  } else if (this.portion === "Medium"){
+    price -=2;
   } else {
   }
     return price;
-  }
+};
 
 Pizza.prototype.fullCost = function() {
 
@@ -43,6 +45,8 @@ $(document).ready(function() {
 
     $(".pizzaCustomization").hide();
     $(".receipt").fadeIn().append(newPizza.fullCost());
+
+
 
   });
 });
