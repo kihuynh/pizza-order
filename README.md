@@ -22,22 +22,23 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 
 * Create a pizza object that will hold,
   - size
-  - type of pizza (premade) OR toppings in a string or array.
+  - first & second topping.
 
 * Prototype of pizza concating all toppings or list the whole array (rethink and modify)
   - list with <br>
   - or as an UL and input it self in <li>
 
 * Prototype of pizza costs
-  - Cost will be based on how many toppings together.
-  - limit of 1-2 toppings
+  - Cost will be based on size of pizza.
+  - 1-3 pizza sizes
 
 #### Front-End Specifications
 
 * Allow customer input
-* Creating pizza options
+* Selecting pizza options
   - size
-  - toppings
+  - first & second toppings
+
 * On submit will output a receipt of all options and price
 
 ## Technologies Used

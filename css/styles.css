@@ -1,3 +1,11 @@
+h1 {
+  text-align: center;
+}
 .receipt {
   display: none;
+}
+
+#order {
+  position: relative;
+  text-align: center;
 }

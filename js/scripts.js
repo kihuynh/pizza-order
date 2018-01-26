@@ -1,6 +1,6 @@
 function Pizza(portion,firstTopping, secondTopping) {
   this.portion = portion;
-  this.firstTopping = firstTopping; // maybe an array of toppings or string
+  this.firstTopping = firstTopping; 
   this.secondTopping = secondTopping;
 }
 
@@ -39,14 +39,10 @@ $(document).ready(function() {
   var pizzaPortion = $("select#size").val();
   var firstTopping = $("select#top").val();
   var secondTopping = $("select#top-2").val();
-
   var newPizza = new Pizza(pizzaPortion, firstTopping, secondTopping);
 
-console.log(newPizza);
     $(".pizzaCustomization").hide();
     $(".receipt").fadeIn().append(newPizza.fullCost());
-
-
 
   });
 });
