@@ -14,20 +14,31 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 * open index.html to browser
 
 ## Specifications
-####Back-End Specificsations
+####Back-End Specifications
 
-* Create a customer object that will hold, 
+* Create a customer object that will hold, (rethink and modify, just do it has a plain input and display for simplicity)
  - name
  - address/phone
 
 * Create a pizza object that will hold,
  - size
- - type of pizza (premade) OR
+ - type of pizza (premade) OR toppings in a string or array.
 
-* Program replaces anything that's divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that"
- - Example Input: 3
- - Example Output: ["I'm sorry, Dave. I'm afraid I can't do that."]
+* Prototype of pizza concating all toppings or list the whole array (rethink and modify)
+  - list with <br>
+  - or as an UL and input it self in <li>
 
+* Prototype of pizza costs
+  - Cost will be based on how many toppings together.
+  - limit of 1-2 toppings
+
+####Front-End Specifications
+
+* Allow customer input
+* Creating pizza options
+  - size
+  - toppings
+* On submit will output a receipt of all options and price
 
 ## Technologies Used
 
