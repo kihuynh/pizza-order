@@ -2,25 +2,23 @@ function Pizza(portion,topping, second) {
   this.portion = portion;
   this.topping = topping; // maybe an array of toppings or string
   this.second = [];
-  this.money= 0;
 }
-
-// Pizza.prototype.allTops = function () {
-//
-// }
 
 Pizza.prototype.cost = function () {
   var price = 10;
 
   if (this.portion === "Small") {
-    price -= 2;
+    price = price -2;
   } else {
-    return price;
+
   }
+    return price;
 }
+
+
 Pizza.prototype.fullCost = function() {
 
-  return this.portion + ", " + this.topping + ".";
+  return "Your order is </br>" +  this.portion + ", " + this.topping + "</br>" + this.cost() + ".";
 }
 
 
@@ -28,10 +26,6 @@ Pizza.prototype.fullCost = function() {
 
 
 $(document).ready(function() {
-//   var pizzaPortion = $("select#size").val();
-//   var pizzaTopping = $("select#top").val();
-//   var newPizza = new Pizza(pizzaPortion, pizzaTopping);
-// console.log(pizzaTopping)
 
   $("form#pizzaSelect").submit(function(event) {
   event.preventDefault();
@@ -46,13 +40,13 @@ $(document).ready(function() {
   var pizzaPortion = $("select#size").val();
   var pizzaTopping = $("select#top").val();
   var newPizza = new Pizza(pizzaPortion, pizzaTopping, tops);
-console.log(newPizza.tops)
+console.log(newPizza.cost)
     //get checkboxes to push into tops variable and output
-    // $("input:checkbox[name=topBits]:checked").each(function(){
-    //   return tops.push($(this).val());
-    // });
+    $("input:checkbox[name=topBits]:checked").each(function(){
+      newPizza.second.push($(this).val());
+    });
 
-    $(".receipt").append(newPizza.fullCost());
+    $(".receipt").show().append(newPizza.fullCost());
     });
 
 
