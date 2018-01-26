@@ -1,7 +1,7 @@
-function Pizza(portion,topping, second) {
+function Pizza(portion,firstTopping, secondTopping) {
   this.portion = portion;
-  this.topping = topping; // maybe an array of toppings or string
-  this.second = [];
+  this.firstTopping = firstTopping; // maybe an array of toppings or string
+  this.secondTopping = secondTopping;
 }
 
 Pizza.prototype.cost = function () {
@@ -10,15 +10,14 @@ Pizza.prototype.cost = function () {
   if (this.portion === "Small") {
     price = price -2;
   } else {
-
   }
     return price;
-}
-
+  }
 
 Pizza.prototype.fullCost = function() {
 
-  return "Your order is </br>" +  this.portion + ", " + this.topping + "</br>" + this.cost() + ".";
+  return "Your order is a, </br>" +  this.portion + ", " + this.firstTopping + ", " + this.secondTopping + "</br>$"
+  + this.cost() + ".";
 }
 
 
@@ -26,7 +25,6 @@ Pizza.prototype.fullCost = function() {
 
 
 $(document).ready(function() {
-
   $("form#pizzaSelect").submit(function(event) {
   event.preventDefault();
   // THIS works because this.portion = portion;
@@ -36,18 +34,19 @@ $(document).ready(function() {
 // console.log(pizzaTopping)
 
 //  testing if it will output a bunch of the toppings
-  var tops= $("input:checkbox[name=topBits]:checked").val();
+  // var tops= $("input:checkbox[name=topBits]:checked").val();
+
   var pizzaPortion = $("select#size").val();
-  var pizzaTopping = $("select#top").val();
-  var newPizza = new Pizza(pizzaPortion, pizzaTopping, tops);
-console.log(newPizza.cost)
-    //get checkboxes to push into tops variable and output
-    $("input:checkbox[name=topBits]:checked").each(function(){
-      newPizza.second.push($(this).val());
-    });
+  var firstTopping = $("select#top").val();
+  var secondTopping = $("select#top-2").val();
 
-    $(".receipt").show().append(newPizza.fullCost());
-    });
+  var newPizza = new Pizza(pizzaPortion, firstTopping, secondTopping);
+
+console.log(newPizza);
+    $(".pizzaCustomization").hide();
+    $(".receipt").fadeIn().append(newPizza.fullCost());
 
 
+
+  });
 });
