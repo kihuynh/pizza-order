@@ -14,15 +14,15 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 * open index.html to browser
 
 ## Specifications
-####Back-End Specifications
+#### Back-End Specifications
 
 * Create a customer object that will hold, (rethink and modify, just do it has a plain input and display for simplicity)
- - name
- - address/phone
+  - name
+  - address/phone
 
 * Create a pizza object that will hold,
- - size
- - type of pizza (premade) OR toppings in a string or array.
+  - size
+  - type of pizza (premade) OR toppings in a string or array.
 
 * Prototype of pizza concating all toppings or list the whole array (rethink and modify)
   - list with <br>
@@ -32,7 +32,7 @@ A webpage that collects customers order for a pizza. Allowing selection for size
   - Cost will be based on how many toppings together.
   - limit of 1-2 toppings
 
-####Front-End Specifications
+#### Front-End Specifications
 
 * Allow customer input
 * Creating pizza options
