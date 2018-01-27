@@ -12,8 +12,14 @@ border-radius: 40%;
 width: 70%;
 
 }
+.btn {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
 .receipt {
   display: none;
+  margin: auto;
 }
 
 #order {

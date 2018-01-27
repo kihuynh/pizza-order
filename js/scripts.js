@@ -18,33 +18,20 @@ Pizza.prototype.cost = function () {
 
 Pizza.prototype.fullCost = function() {
 
-  return "Your order is a, </br>" +  this.portion + " pizza , </br>" + "With " + this.firstTopping + ", " + this.secondTopping + ".";
+  return "Your order is a, </br>" +  this.portion + " pizza , </br>" + "With " + this.firstTopping + " and " + this.secondTopping + ". </br> Final cost is, $" + this.cost() + ".";
 }
-
-
-
-
 
 $(document).ready(function() {
   $("form#pizzaSelect").submit(function(event) {
   event.preventDefault();
-  // THIS works because this.portion = portion;
-//   var pizzaPortion = $("select#size").val();
-//   var pizzaTopping = $("select#top").val();
-//   var newPizza = new Pizza(pizzaPortion, pizzaTopping);
-// console.log(pizzaTopping)
 
-//  testing if it will output a bunch of the toppings
-  // var tops= $("input:checkbox[name=topBits]:checked").val();
-
-  var pizzaPortion = $("select#size").val();
-  var firstTopping = $("select#top").val();
-  var secondTopping = $("select#top-2").val();
-  var newPizza = new Pizza(pizzaPortion, firstTopping, secondTopping);
+    var pizzaPortion = $("select#size").val();
+    var firstTopping = $("select#top").val();
+    var secondTopping = $("select#top-2").val();
+    var newPizza = new Pizza(pizzaPortion, firstTopping, secondTopping);
 
     $(".pizzaCustomization").hide();
     $(".receipt").fadeIn().append(newPizza.fullCost());
-
 
   });
 });

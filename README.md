@@ -18,15 +18,15 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 
 * Create a pizza constructor that will hold,
   - size
-  - first & second topping.
+  - first & second topping
 
 * Prototype of pizza costs
-  - Cost will be based on size of pizza.
+  - Cost will be based on size of pizza
   - 1-3 pizza sizes
+  - if statement to determine what size is at what price
 
 * Prototype of pizza of full cost
   - will return all options selected using objects
-  -
 
 #### Front-End Specifications
 
@@ -45,4 +45,4 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 
 ### License
 
-Copyright (c) 2018 #### Kimberly Huynh ####
+Copyright (c) 2018 #### Kimberly Huynh
