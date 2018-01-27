@@ -16,17 +16,17 @@ A webpage that collects customers order for a pizza. Allowing selection for size
 ## Specifications
 #### Back-End Specifications
 
-* Create a pizza object that will hold,
+* Create a pizza constructor that will hold,
   - size
   - first & second topping.
-
-* Prototype of pizza concating all toppings or list the whole array (rethink and modify)
-  - will return all options selected
-
 
 * Prototype of pizza costs
   - Cost will be based on size of pizza.
   - 1-3 pizza sizes
+
+* Prototype of pizza of full cost
+  - will return all options selected using objects
+  -
 
 #### Front-End Specifications
 

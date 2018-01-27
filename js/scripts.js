@@ -1,6 +1,6 @@
 function Pizza(portion,firstTopping, secondTopping) {
   this.portion = portion;
-  this.firstTopping = firstTopping; 
+  this.firstTopping = firstTopping;
   this.secondTopping = secondTopping;
 }
 
@@ -18,8 +18,7 @@ Pizza.prototype.cost = function () {
 
 Pizza.prototype.fullCost = function() {
 
-  return "Your order is a, </br>" +  this.portion + " pizza , </br>" + "With " + this.firstTopping + ", " + this.secondTopping + "</br> Final cost is $"
-  + this.cost() + ".";
+  return "Your order is a, </br>" +  this.portion + " pizza , </br>" + "With " + this.firstTopping + ", " + this.secondTopping + ".";
 }
 
 
@@ -44,8 +43,7 @@ $(document).ready(function() {
   var newPizza = new Pizza(pizzaPortion, firstTopping, secondTopping);
 
     $(".pizzaCustomization").hide();
-    $(".receipt").fadeIn().append(newPizza.fullCost().toLowerCase());
-
+    $(".receipt").fadeIn().append(newPizza.fullCost());
 
 
   });
